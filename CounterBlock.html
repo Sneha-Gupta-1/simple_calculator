@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Counter Block</title>
+    <link rel="stylesheet" href="./Style.css" />
+  </head>
+  <body>
+    <div class="box">
+      <div class="calculator">
+        <div class="textbox">
+          <input
+            class="input"
+            type="text"
+            id="numberInput"
+            value=""
+            readomly
+          />
+        </div>
+        <div class="container">
+          <button class="button" onclick="numberInput.value=''">AC</button>
+          <button class="button" onclick="numberInput.value=numberInput.value.toString().slice(0,-1)">DE</button>
+          <button class="button"onclick="appendDot()">.</button>
+          <button class="button" onclick="appendOperator('/')">/</button>
+        </div>
+        <div class="container">
+          <button class="button" onclick="numberInput.value+='1'">1</button>
+          <button class="button" onclick="numberInput.value+='2'">2</button>
+          <button class="button" onclick="numberInput.value+='3'">3</button>
+          <button class="button" onclick="numberInput.value+='*'">*</button>
+        </div>
+
+        <div class="container">
+          <button class="button" onclick="numberInput.value+='4'">4</button>
+          <button class="button" onclick="numberInput.value+='5'">5</button>
+          <button class="button" onclick="numberInput.value+='6'">6</button>
+          <button class="button" onclick="numberInput.value+= '+'">+</button>
+        </div>
+        <div class="container">
+          <button class="button" onclick="numberInput.value+='7'" >7</button>
+          <button class="button" onclick="numberInput.value+='8'">8</button>
+          <button class="button" onclick="numberInput.value+='9'">9</button>
+          <button class="button" onclick="numberInput.value+='-'">-</button>
+        </div>
+        <div class="container">
+          <button class="button" onclick="numberInput.value+='0'">0</button>
+          <button class="button" onclick="numberInput.value+='00'">00</button>
+          <button class="button" onclick="numberInput.value= eval(numberInput.value)">=</button>
+          <button class="button" onclick="numberInput.value+='^'">^</button>
+
+        </div>
+
+        <script src="./Script.js"></script>
+      </div>
+    </div>
+  </body>
+</html>
